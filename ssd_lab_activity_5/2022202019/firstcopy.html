@@ -1,0 +1,85 @@
+<script>
+    function Showstudent(){
+        var Row=document.getElementById('StudentTable').insertRow(1);
+var col1 = Row.insertCell(0);
+var col2 = Row.insertCell(1);
+var rolln=document.getElementById('rno').value;
+var sname=document.getElementById('sname').value;
+col1.innerHTML=rolln;
+col2.innerHTML=sname;
+    
+    }
+
+    function deleterow(){
+       var Row= document.getElementById('StudentTable');
+       Row.deleteRow(1);
+
+
+
+
+    }
+    
+</script>
+
+
+
+
+<html >
+
+<style>
+    body { height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            display: grid;
+            justify-items: center;
+            margin-top: 100px;
+            
+            background-color: powderblue;
+        }
+
+        input[type=text]{
+            height: 40px;
+            width:300px;
+
+        }
+        
+        #add{
+            height: 40px;
+            width:300px;
+            border-radius: 15px;
+            background-color: green;
+
+        }
+        #delete{
+            height: 40px;
+            width:300px;
+            border-radius: 15px;
+            background-color: red;
+
+        }
+        tr:nth-child(even){
+            background-color: greenyellow;
+        }
+</style>
+
+    <center><body>
+    <input type="text" placeholder="Enter Rollnumber" id="rno" name="Rollno">
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="Enter Name" id="sname" name="stname">
+    &nbsp;&nbsp;
+    <button id="add" type="submit" onclick="Showstudent()">Add New </button> 
+
+<table id="StudentTable" border="1" width="60%" cellpadding="20" cellspacing="2" >
+<caption><b>Students Record</b></caption>
+
+
+
+<tr bgcolor="silver">
+ <th>Student Rollnumber</th>
+ <th>Student Name</th>
+ 
+</tr>
+</table>
+<button id="delete"  type="submit" onclick="deleterow()">Delete Last Record</button>
+</body></center>
+</html>
