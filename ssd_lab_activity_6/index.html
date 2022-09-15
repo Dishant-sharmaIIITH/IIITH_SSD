@@ -1,0 +1,85 @@
+<!Doctype Html>  
+    <Html>     
+        <Head>      
+            <Title>     
+                Team Information Form
+            </Title>  
+            <link rel="stylesheet" href="form.css">
+            <script src="form.js"></script>
+        </Head>  
+    <Body>   
+        <form action="index.html" method="post" onsubmit="show_popup(event)">  
+            <label>
+                <table id="Teaminfo" >
+                    <caption><b>Team form</b></caption>
+                    
+                    
+                    
+                    <tr >
+                     <th>Manager Name</th>
+                     <th><input type="text" placeholder="Manager name" id="mname" required ><br></th>
+                     
+                    </tr>
+
+                    <tr >
+                        <th>Group Email</th>
+                        <th><input type="email" placeholder="Group email" id="gemail" required ><br></th>
+                        
+                    </tr>
+                    <tr >
+                        <th>Server Username</th>
+                        <th><input type="text"  placeholder="servar username" id="suname" required ><br></th>
+                        
+                    </tr>
+                    <tr >
+                        <th>Server Password</th>
+                        <th><input type="password" placeholder="Please enter password" name="password" required ></th>
+                        
+                    </tr>
+                    <tr >
+                        <th>Confirm Password</th>
+                        <th><input type="password" placeholder="Please enter password" name="password" required ></th>
+                        
+                    </tr>
+                    <tr >
+                        <th>Team Lead</th>
+                        <th><select name="teamlead" id="tlname">
+                            <option>Sachin</option>
+                            <option>Dhoni</option>
+                            <option>Ganguli</option>
+                            <option>Dravid</option>
+                            
+                            </select></th>
+                        
+                    </tr>
+                    <tr >
+                        <th>Team Members</th>
+                        <th><div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                            <div draggable="true" class="box" ondragstart="drag(event)">A</div>
+                            <div draggable="true" class="box" ondragstart="drag(event)">B</div>
+                            <div draggable="true" class="box" ondragstart="drag(event)">C</div>
+
+                        </div>
+                        </th>
+
+                        <th><div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        </th>
+
+                        
+
+                        
+                    </tr>
+                    <tr >
+                        <th><button id="submit" type="submit" >Submit </button> </th>
+                        
+                        
+                    </tr>
+
+
+                    </table>
+            </label>
+      
+        </form>   
+    </Body>   
+</Html> 
